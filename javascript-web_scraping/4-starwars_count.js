@@ -10,16 +10,15 @@ request(url, function (error, response, body) {
   if (error) {
     console.error(error);
   } else {
-    const bodyJson = JSON.parse(body);
-    for (let i = 0; i < bodyJson.count; i++) {
-      let characters = bodyJson.results[i].characters
+    for (let i = 0; i < body.count; i++) {
+      let characters = body.results[i].characters
       for (j in characters) {
-        if (j == "18") {
+        if (j == "https://swapi-api.hbtn.io/api/people/18") {
         contador += 1
         }
       }
     }
-    console.log(contador - 1)
+    console.log(contador)
   }
 });
 
