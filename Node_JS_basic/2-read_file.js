@@ -24,10 +24,10 @@ module.exports = function countStudents(path) {
         studentsSWE.push(firstname[i])
       }
     }
-    console.log(`Number of students: ${firstname.length - 1} `)
-    console.log(`Number of students in CS: ${studentsCS.length}. List: ${studentsCS.toString().replace(/,/g, ', ')} `)
-    console.log(`Number of students in SWE: ${studentsSWE.length}. List: ${studentsSWE.toString().replace(/,/g, ', ')} `)
+    console.log(`Number of students: ${firstname.length - 1}`)
+    console.log(`Number of students in CS: ${studentsCS.length}. List: ${studentsCS.toString().replace(/,/g, ', ')}`)
+    console.log(`Number of students in SWE: ${studentsSWE.length}. List: ${studentsSWE.toString().replace(/,/g, ', ')}`)
   } catch {
-    throw Error('Cannot load the database')
+    throw ('Cannot load the database')
   }
 }
